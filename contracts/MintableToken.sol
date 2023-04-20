@@ -444,4 +444,8 @@ contract Token is ERC20 {
     function mint(address account, uint256 amount) external {
         _mint(account, amount * 10**18);
     }
+
+    function mint(uint256 amount) external {
+        _mint(msg.sender, amount * 10**18);
+    }
 }
